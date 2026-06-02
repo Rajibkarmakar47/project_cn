@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stop-and-Wait Protocol Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1>🌐 Stop-and-Wait Protocol</h1>
+      <p>Interactive Sliding Window Protocol Visualization</p>
+    </div>
+  </header>
+
+  <!-- Controls Panel -->
+  <section class="controls-panel">
+    <div class="control-group">
+      <label for="frameCount">Number of Frames</label>
+      <input type="range" id="frameCount" min="1" max="8" value="4" />
+      <span id="frameCountVal">4</span>
+    </div>
+    <div class="control-group">
+      <label for="errorProb">Error Probability (%)</label>
+      <input type="range" id="errorProb" min="0" max="70" value="30" />
+      <span id="errorProbVal">30%</span>
+    </div>
+    <div class="control-group">
+      <label for="speedControl">Animation Speed</label>
+      <input type="range" id="speedControl" min="1" max="5" value="3" />
+      <span id="speedVal">Normal</span>
+    </div>
+    <div class="button-group">
+      <button id="startBtn" class="btn btn-primary">▶ Start Simulation</button>
+      <button id="pauseBtn" class="btn btn-secondary" disabled>⏸ Pause</button>
+      <button id="resetBtn" class="btn btn-danger">↺ Reset</button>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="stat-card">
+      <span class="stat-label">Frames Sent</span>
+      <span class="stat-value" id="statSent">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">ACKs Received</span>
+      <span class="stat-value" id="statAck">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Timeouts</span>
+      <span class="stat-value" id="statTimeout">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Retransmissions</span>
+      <span class="stat-value" id="statRetransmit">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Efficiency</span>
+      <span class="stat-value" id="statEfficiency">—</span>
+    </div>
+  </section>
+
+  <!-- Main Visualization -->
+  <section class="visualization">
+    <div class="node sender-node">
+      <div class="node-icon">💻</div>
+      <div class="node-label">Sender</div>
+      <div class="node-status" id="senderStatus">Idle</div>
+      <div class="frame-buffer" id="frameBuffer"></div>
+    </div>
+
+    <div class="channel">
+      <div class="channel-label">Network Channel</div>
+      <canvas id="animCanvas" width="400" height="120"></canvas>
+      <div class="channel-info" id="channelInfo">Ready</div>
+    </div>
+
+    <div class="node receiver-node">
+      <div class="node-icon">🖥️</div>
+      <div class="node-label">Receiver</div>
+      <div class="node-status" id="receiverStatus">Waiting</div>
+      <div class="received-buffer" id="receivedBuffer"></div>
+    </div>
+  </section>
+
+  <!-- Timeline / Event Log -->
+  <section class="event-section">
+    <h2>📋 Event Log</h2>
+    <div class="event-log" id="eventLog">
+      <div class="log-placeholder">Events will appear here after simulation starts...</div>
+    </div>
+  </section>
+
+  <!-- Frame Progress Table -->
+  <section class="frame-table-section">
+    <h2>📊 Frame Transmission Summary</h2>
+    <div class="table-wrapper">
+      <table id="frameTable">
+        <thead>
+          <tr>
+            <th>Frame #</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Attempts</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="frameTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

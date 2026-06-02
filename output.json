@@ -1,0 +1,175 @@
+{
+  "total_frames": 4,
+  "error_probability": 30,
+  "total_events": 21,
+  "events": [
+    {
+      "id": 1,
+      "type": "FRAME_SENT",
+      "frame_id": 1,
+      "message": "Frame 1 sent → [Data: Hello World]",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 2,
+      "type": "FRAME_LOST",
+      "frame_id": 1,
+      "message": "Frame 1 lost in transit!",
+      "is_error": 1,
+      "is_retransmit": 0
+    },
+    {
+      "id": 3,
+      "type": "TIMEOUT",
+      "frame_id": 1,
+      "message": "Timeout! No ACK received for Frame 1. Retransmitting...",
+      "is_error": 1,
+      "is_retransmit": 0
+    },
+    {
+      "id": 4,
+      "type": "RETRANSMIT",
+      "frame_id": 1,
+      "message": "Frame 1 retransmitted → [Data: Hello World] (Attempt 2)",
+      "is_error": 0,
+      "is_retransmit": 1
+    },
+    {
+      "id": 5,
+      "type": "ACK_RECEIVED",
+      "frame_id": 1,
+      "message": "ACK 1 received ✓ — Frame 1 acknowledged successfully",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 6,
+      "type": "SUCCESS",
+      "frame_id": 1,
+      "message": "Frame 1 delivered successfully after 2 attempt(s)",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 7,
+      "type": "FRAME_SENT",
+      "frame_id": 2,
+      "message": "Frame 2 sent → [Data: Data Packet]",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 8,
+      "type": "FRAME_LOST",
+      "frame_id": 2,
+      "message": "Frame 2 lost in transit!",
+      "is_error": 1,
+      "is_retransmit": 0
+    },
+    {
+      "id": 9,
+      "type": "TIMEOUT",
+      "frame_id": 2,
+      "message": "Timeout! No ACK received for Frame 2. Retransmitting...",
+      "is_error": 1,
+      "is_retransmit": 0
+    },
+    {
+      "id": 10,
+      "type": "RETRANSMIT",
+      "frame_id": 2,
+      "message": "Frame 2 retransmitted → [Data: Data Packet] (Attempt 2)",
+      "is_error": 0,
+      "is_retransmit": 1
+    },
+    {
+      "id": 11,
+      "type": "ACK_RECEIVED",
+      "frame_id": 2,
+      "message": "ACK 2 received ✓ — Frame 2 acknowledged successfully",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 12,
+      "type": "SUCCESS",
+      "frame_id": 2,
+      "message": "Frame 2 delivered successfully after 2 attempt(s)",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 13,
+      "type": "FRAME_SENT",
+      "frame_id": 3,
+      "message": "Frame 3 sent → [Data: Network Msg]",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 14,
+      "type": "ACK_LOST",
+      "frame_id": 3,
+      "message": "ACK 3 lost in transit!",
+      "is_error": 1,
+      "is_retransmit": 0
+    },
+    {
+      "id": 15,
+      "type": "TIMEOUT",
+      "frame_id": 3,
+      "message": "Timeout! ACK not received for Frame 3. Retransmitting...",
+      "is_error": 1,
+      "is_retransmit": 0
+    },
+    {
+      "id": 16,
+      "type": "RETRANSMIT",
+      "frame_id": 3,
+      "message": "Frame 3 retransmitted → [Data: Network Msg] (Attempt 2)",
+      "is_error": 0,
+      "is_retransmit": 1
+    },
+    {
+      "id": 17,
+      "type": "ACK_RECEIVED",
+      "frame_id": 3,
+      "message": "ACK 3 received ✓ — Frame 3 acknowledged successfully",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 18,
+      "type": "SUCCESS",
+      "frame_id": 3,
+      "message": "Frame 3 delivered successfully after 2 attempt(s)",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 19,
+      "type": "FRAME_SENT",
+      "frame_id": 4,
+      "message": "Frame 4 sent → [Data: Frame Data]",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 20,
+      "type": "ACK_RECEIVED",
+      "frame_id": 4,
+      "message": "ACK 4 received ✓ — Frame 4 acknowledged successfully",
+      "is_error": 0,
+      "is_retransmit": 0
+    },
+    {
+      "id": 21,
+      "type": "SUCCESS",
+      "frame_id": 4,
+      "message": "Frame 4 delivered successfully after 1 attempt(s)",
+      "is_error": 0,
+      "is_retransmit": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+=== Stop-and-Wait Protocol Simulation ===
+Total Frames: 4
+
+[TX]  Frame 1 sent → [Data: Hello World]
+[ERR] Frame 1 lost in transit!
+[TMO] Timeout! No ACK received for Frame 1. Retransmitting...
+[TX]  Frame 1 retransmitted → [Data: Hello World] (Attempt 2)
+[ACK] ACK 1 received ✓ — Frame 1 acknowledged successfully
+
+[OK]  Frame 1 delivered successfully after 2 attempt(s)
+
+[TX]  Frame 2 sent → [Data: Data Packet]
+[ERR] Frame 2 lost in transit!
+[TMO] Timeout! No ACK received for Frame 2. Retransmitting...
+[TX]  Frame 2 retransmitted → [Data: Data Packet] (Attempt 2)
+[ACK] ACK 2 received ✓ — Frame 2 acknowledged successfully
+
+[OK]  Frame 2 delivered successfully after 2 attempt(s)
+
+[TX]  Frame 3 sent → [Data: Network Msg]
+[ERR] ACK 3 lost in transit!
+[TMO] Timeout! ACK not received for Frame 3. Retransmitting...
+[TX]  Frame 3 retransmitted → [Data: Network Msg] (Attempt 2)
+[ACK] ACK 3 received ✓ — Frame 3 acknowledged successfully
+
+[OK]  Frame 3 delivered successfully after 2 attempt(s)
+
+[TX]  Frame 4 sent → [Data: Frame Data]
+[ACK] ACK 4 received ✓ — Frame 4 acknowledged successfully
+
+[OK]  Frame 4 delivered successfully after 1 attempt(s)
+
+=== Simulation Complete ===
+Total Events: 21
